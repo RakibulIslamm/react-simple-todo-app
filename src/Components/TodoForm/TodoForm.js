@@ -46,7 +46,6 @@ const TodoForm = ({ setTodos, todos }) => {
                 toast.success('Todos reset successfully')
             }
             else {
-                console.log('not deleted');
                 close();
             }
             close();
@@ -78,7 +77,7 @@ const TodoForm = ({ setTodos, todos }) => {
             <br />
             <div className='flex justify-between items-center'>
                 <button onClick={handleLogout}>Logout</button>
-                <button className='flex items-center gap-2 bg-red-900 px-4 py-1' onClick={handleResetTodos}><BiReset />Reset todos</button>
+                {todos && <button className='flex items-center gap-2 bg-red-900 px-4 py-1' onClick={handleResetTodos}><BiReset />Reset todos</button>}
             </div>
         </div>
     );

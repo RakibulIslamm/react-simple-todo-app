@@ -4,7 +4,6 @@ import { useLocation, useNavigate } from 'react-router-dom';
 const Login = () => {
 
     const user = JSON.parse(localStorage.getItem('user'));
-    console.log(user);
 
     let navigate = useNavigate();
     let location = useLocation();
@@ -42,7 +41,7 @@ const Login = () => {
                                         </div>
                                         <form onSubmit={handleLogin}>
                                             <div className="mb-4">
-                                                <input type="text" name='email' className="block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white border border-solid border-gray-300 rounded focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="Email" required />
+                                                <input type="email" name='email' className="block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white border border-solid border-gray-300 rounded focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="Email" required />
                                             </div>
                                             <div className="mb-4">
                                                 <input type="password" name='password' className="block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white  border border-solid border-gray-300 rounded focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="Password" required />

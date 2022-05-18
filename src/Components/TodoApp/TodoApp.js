@@ -19,12 +19,12 @@ const TodoApp = () => {
                 setTodos(newTodos);
                 localStorage.setItem('todos', JSON.stringify(newTodos));
                 if (!newTodos.length) {
-                    setTodos('')
+                    setTodos('');
+                    localStorage.removeItem('todos')
                 }
                 toast.success('Todo deleted successfully')
             }
             else {
-                console.log('not deleted');
                 close();
             }
             close();
@@ -48,6 +48,7 @@ const TodoApp = () => {
             return todo;
         }
         );
+        toast('Successfully Completed The Task');
         setTodos(newTodos);
         localStorage.setItem('todos', JSON.stringify(newTodos))
     }
@@ -65,7 +66,7 @@ const TodoApp = () => {
                     <h2 className='text-3xl text-gray-400'>You have no todos</h2>
                 </div>}
             </section>
-            <ToastContainer />
+            <ToastContainer position="bottom-left" />
         </>
     );
 };
