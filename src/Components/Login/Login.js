@@ -37,7 +37,7 @@ const Login = () => {
                                         <div>
                                             <h4 className="text-2xl font-bold mt-1 pb-1">React Todo App</h4>
                                             <h4 className="text-md font-semibold mt-1 mb-8 pb-1">Please Login first</h4>
-                                            <p className="text-sm mt-1 mb-8 pb-1">You can login through any email and password</p>
+                                            <p className="text-lg mt-1 mb-8 pb-1 text-yellow-800">You can login through any email and password</p>
                                         </div>
                                         <form onSubmit={handleLogin}>
                                             <div className="mb-4">
