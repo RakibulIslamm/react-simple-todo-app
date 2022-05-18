@@ -24,7 +24,7 @@ const TodoApp = () => {
                 // console.log(singleTodo);
                 const newTodos = todos.filter(todo => todo.id !== singleTodo.id);
                 setTodos(newTodos);
-                toast.success('List deleted successfully')
+                toast.success('Todo deleted successfully')
             }
             else {
                 console.log('not deleted');
